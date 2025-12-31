@@ -1,0 +1,26 @@
+<div class="ticker-container">
+  <!-- Breaking News Ticker -->
+  <div class="ticker-wrapper">
+    <div class="ticker-label">
+      <span class="pulse"></span>
+      <span>BREAKING NEWS</span>
+    </div>
+    <div class="ticker">
+      <div class="ticker-content">
+        <% @articles.each do |article| %>
+          <a href="<%= article["url"] %>" target="_blank" class="ticker-item">
+            <span class="ticker-bullet">●</span>
+            <%= article["title"] %>
+          </a>
+        <% end %>
+        <!-- Duplicate for seamless loop -->
+        <% @articles.each do |article| %>
+          <a href="<%= article["url"] %>" target="_blank" class="ticker-item">
+            <span class="ticker-bullet">●</span>
+            <%= article["title"] %>
+          </a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

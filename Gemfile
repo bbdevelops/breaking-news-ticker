@@ -14,6 +14,7 @@ gem "sinatra-activerecord"
 
 gem "http"
 gem "dotenv"
+gem "rackup", "~> 2.3"
 
 group :development do
   gem "better_errors"
