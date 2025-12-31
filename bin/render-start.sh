@@ -2,5 +2,5 @@
 # exit on error
 set -o errexit
 
-# Sinatra
-bundle exec rackup
+# Sinatra - use puma directly to avoid rackup handler issues
+bundle exec puma -C config/puma.rb
