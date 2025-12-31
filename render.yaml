@@ -8,3 +8,5 @@ services:
     envVars: # this section sets some ENV variables needed by Render for deployment
       - key: SECRET_KEY_BASE
         generateValue: true
+      - key: GNEWS_API_KEY
+        generateValue: true # Render generates a random base64-encoded, 256-bit secret for APP_SECRET
